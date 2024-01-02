@@ -85,6 +85,10 @@ body {
   text-transform: uppercase;
 }
 
+.pokemon h2 {
+  margin: 5px;
+}
+
 .pokemon img {
   top: -55px;
   position: absolute;
@@ -97,7 +101,8 @@ body {
   opacity: 0.8;
 }
 
-.type h3 {
+.type h5 {
+  font-size: 14px;
   margin: 5px;
   margin-top: 15px;
   padding: 3px 7px;
@@ -138,18 +143,128 @@ main{
 
 aside {
   border-radius: 20px 20px 0 0;
-  padding: 0 15px;
   text-align: center;
   position: fixed;
   height: 82vh;
-  width: 320px;
-  padding: 20px;
-  display: inline-flex;
+  width: 324px;
+  padding: 0 15px;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   box-shadow: #EDEDED 0 10px 10px;
   bottom: 0;
   right: calc(10vw - 20px);
+  background-color: white;
+}
+
+aside img {
+  position: absolute;
+  bottom: 77vh;
+  image-rendering: pixelated;
+  max-height: 22vh;
+}
+
+aside h4 {
+  font-size: 18px;
+  padding: 60px;
+  opacity: 50%;
+  font-weight: normal;
+}
+
+aside h2 {
+  margin: 5px;
+}
+
+aside h2::first-letter {
+  text-transform: uppercase;
+}
+
+.desc {
+  opacity: 50%;
+}
+
+.abis {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+aside h3 {
+  font-size: 16px;
+  margin: 5px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.number {
+  font-size: 13px;
+  opacity: 50%;
+  font-weight: bold;
+}
+
+.descSpect {
+  width: 100%;
+}
+
+.statDesc {
+  color: black;
+  background-color: #eceef2;
+  padding: 8px 0;
+  border-radius: 30px;
+  margin: 5px;
+}
+
+.abi {
+  width: 100%;
+}
+
+.size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.stats {
+  display: flex;
+}
+
+.stat {
+  margin: 5px;
+  padding: 5px;
+  background-color: #eceef2;
+  border-radius: 30px;
+}
+
+.stat:last-child{
+  background-color: #88AAEA;
+
+}
+
+.stat div {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.stat p {
+  margin: 6px 0;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.abi::first-letter {
+  text-transform: uppercase;
 }
 
 @keyframes hideLoading {
