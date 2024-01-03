@@ -140,29 +140,46 @@ main{
   margin-right: 320px;
 } 
 
-
 aside {
   border-radius: 20px 20px 0 0;
   text-align: center;
-  position: fixed;
   height: 82vh;
-  width: 324px;
+  width: 375px;
   padding: 0 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: #EDEDED 0 10px 10px;
-  bottom: 0;
-  right: calc(10vw - 20px);
   background-color: white;
+  transition: margin 700ms;
 }
 
-aside img {
+.pokeInfo {
+  position: fixed;
+  height: 82vh;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  right: calc(5vw - 20px);
+}
+
+aside img:not(.evolution img) {
   position: absolute;
   bottom: 77vh;
   image-rendering: pixelated;
   max-height: 22vh;
+}
+
+.loadingAside{
+  height: 60px;
+  animation: rotatePokeBall ease-in-out 3s infinite;
+  z-index: -1;
+  position: fixed;
+  filter: brightness(80%);
 }
 
 aside h4 {
@@ -200,6 +217,7 @@ aside h3 {
 }
 
 .number {
+  margin-top: 10px;
   font-size: 13px;
   opacity: 50%;
   font-weight: bold;
@@ -265,6 +283,32 @@ aside h3 {
 
 .abi::first-letter {
   text-transform: uppercase;
+}
+
+.evolution {
+  display: flex;
+  align-items: center;
+}
+
+.evolution p {
+  width: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: rgba(128, 128, 128, 0.1);
+  padding: 8px 0;
+  margin: 5px;
+  border-radius: 30px;
+}
+
+.evo {
+  height: 74px;
+  width: 74px;
+  cursor: pointer;
+  border-radius: 30%;
+}
+
+.evo:hover {
+  background-color: rgba(128, 128, 128, 0.1);
 }
 
 @keyframes hideLoading {
